@@ -69,4 +69,50 @@ afin qu’il puisse découvrir l’histoire cinématographique et planifier ses 
 
 **Pour le Jeune créateur**, qui manque de ressources locales accessibles et de soutien concret pour développer ses compétences,  
 nous voulons fournir un espace en ligne proposant tutoriels, opportunités de financement et partage de projets,  
-afin qu’il puisse apprendre, exposer ses créations et construire un réseau local sans perdre de temps.
+afin qu'il puisse apprendre, exposer ses créations et construire un réseau local sans perdre de temps.
+
+-------------
+
+## Diagramme de cas d'utilisation
+
+```
+@startuml
+title Diagramme de cas d’utilisation -- Blog: Ouarzazate - Cinéma Atlas
+
+actor "Touriste culturel" as Touriste
+actor "Administrateur" as Admin
+
+rectangle "Blog Ouarzazate" {
+  
+  (Consulter la liste des articles) as UC1
+  (Lire un article en détail) as UC2
+  (Rechercher un article) as UC3
+  (Sauvegarder un article) as UC4
+  (Partager un article) as UC5
+  
+  (Gérer les articles) as UC6
+}
+
+Touriste --> UC1
+Touriste --> UC2
+Touriste --> UC3
+Touriste --> UC4
+Touriste --> UC5
+
+Admin --> UC6
+
+@enduml
+```
+
+
+Ce diagramme de cas d'utilisation illustre les principales fonctionnalités de notre MVP système et leurs relations avec les différents types d'utilisateurs. Il met en évidence :
+
+1. **Pour le Touriste Culturel :**
+   - Consultation des articles et vidéos sur le patrimoine cinématographique
+   - Recherche d'informations touristiques (visites, événements)
+   - Sauvegarde de contenus intéressants
+   - Partage sur les réseaux sociaux
+
+2. **Pour l'Administrateur :**
+   - Gestion des contenus du site
+   - Gestion des utilisateurs
