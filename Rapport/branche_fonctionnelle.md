@@ -89,7 +89,6 @@ rectangle "Blog Ouarzazate" {
   (Rechercher un article) as UC3
   (Sauvegarder un article) as UC4
   (Partager un article) as UC5
-  
   (Gérer les articles) as UC6
 }
 
