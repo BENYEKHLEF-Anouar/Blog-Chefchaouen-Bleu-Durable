@@ -1,1 +1,1 @@
-# Blog: Chefchaouen - Bleu Durable
+# Blog: Ouarzazate – Cinéma Atlas
