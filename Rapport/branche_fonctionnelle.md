@@ -6,6 +6,8 @@ Ouarzazate – Cinéma Atlas
 
 Comment préserver le patrimoine cinématographique de Ouarzazate et soutenir les jeunes créateurs locaux ?
 
+--------------
+
 ## Identifier l’utilisateur principal
 
 # Persona – Touriste culturel (Prioritaire)
@@ -28,8 +30,7 @@ Difficulté à trouver des informations fiables et bien présentées sur le patr
 **Environnement :**  
 Smartphone Android et PC portable, utilise Wi-Fi dans les hôtels et connexion mobile limitée en déplacement.
 
-
---------------
+----
 
 # Persona – Jeune créateur
 
@@ -54,7 +55,9 @@ Smartphone Android pour les recherches et les partages rapides, PC portable pour
 
 -------------
 
-## Problem Statement
+## Définir le problème et la solution
+
+# Problem Statement
 
 **Pour le Touriste culturel**, qui a du mal à trouver des informations fiables et centralisées sur le patrimoine cinématographique de Ouarzazate,  
 nous voulons créer un blog et une plateforme multimédia qui regroupent articles, vidéos et informations pratiques sur les studios et le cinéma local,  
