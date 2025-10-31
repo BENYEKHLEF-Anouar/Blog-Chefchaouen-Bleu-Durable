@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Cinéma Atlas Ouarzazate</title>
+    <meta name="description" content="Toutes les histoires, les actualités et les secrets de Ouarzazate, le Hollywood marocain. Articles sur l'histoire du cinéma, les blockbusters et la culture locale.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Open+Sans:wght@300;400;600&display=swap');
+        :root { --color-primary-dark: #C19A6B; }
+        body { font-family: 'Open Sans', sans-serif; }
+        h1, h2, h3, .logo { font-family: 'Cinzel', serif; }
+        .film-reel { background-image: repeating-linear-gradient(90deg, #1f2937 0px, #1f2937 10px, var(--color-primary-dark) 10px, var(--color-primary-dark) 12px); height: 6px; }
+        .card-hover { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .card-hover:hover { transform: translateY(-10px); box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); }
+        .mobile-menu { transition: transform 0.3s ease-in-out; }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <!-- Header -->
+    <header class="bg-gray-900 text-white shadow-lg sticky top-0 z-50">
+        <div class="film-reel"></div>
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <a href="index.html" class="logo text-3xl font-bold flex items-center space-x-2" aria-label="Page d'accueil de Cinéma Atlas">
+                    <i class="fas fa-film text-amber-400"></i>
+                    <span class="bg-gradient-to-r from-amber-400 to-amber-300 bg-clip-text text-transparent">Cinéma Atlas</span>
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="hover:text-amber-400 transition-colors">Accueil</a>
+                    <a href="blog.html" class="text-amber-400 font-semibold">Blog</a>
+                    <a href="#" class="hover:text-amber-400 transition-colors">Studios</a>
+                    <a href="#" class="hover:text-amber-400 transition-colors">Événements</a>
+                    <a href="#" class="hover:text-amber-400 transition-colors">Contact</a>
+                    <a href="user_login.html" class="flex items-center space-x-2 px-4 py-2 bg-amber-600 rounded-md hover:bg-amber-700 transition-colors duration-300">
+                        <i class="fas fa-user"></i>
+                        <span>Connexion</span>
+                    </a>
+                </div>
+                 <button id="mobile-menu-button" class="md:hidden text-white hover:text-amber-400 transition-colors duration-300" aria-label="Ouvrir le menu de navigation">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="mobile-menu md:hidden bg-gray-800 absolute w-full transform -translate-x-full">
+             <a href="index.html" class="block px-6 py-3 hover:text-amber-400">Accueil</a>
+             <a href="blog.html" class="block px-6 py-3 text-amber-400 font-semibold">Blog</a>
+             <a href="#" class="block px-6 py-3 hover:text-amber-400">Studios</a>
+             <a href="#" class="block px-6 py-3 hover:text-amber-400">Événements</a>
+             <a href="#" class="block px-6 py-3 hover:text-amber-400">Contact</a>
+             <a href="user_login.html" class="block px-6 py-3 hover:text-amber-400">Connexion</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-16">
+        <div class="text-center mb-12">
+            <h1 class="text-5xl md:text-6xl font-bold text-gray-800">Le Blog du Cinéma Atlas</h1>
+            <p class="text-lg text-gray-600 mt-4">Toutes les histoires et les secrets de Ouarzazate, le Hollywood marocain.</p>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="max-w-2xl mx-auto mb-16">
+            <div class="relative">
+                <input type="search" placeholder="Rechercher un article..." aria-label="Rechercher un article" class="w-full py-4 pl-12 pr-4 text-lg border-2 border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent transition">
+                <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                    <i class="fas fa-search text-gray-400"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Articles Grid -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+            <!-- Article Card 1 -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover transition-all duration-300">
+                <div class="relative">
+                    <img src="https://source.unsplash.com/800x600/?cinema,studio" alt="Studio Atlas" class="w-full h-56 object-cover">
+                    <button class="absolute top-4 right-4 bg-black bg-opacity-40 w-10 h-10 rounded-full flex items-center justify-center text-white hover:bg-red-500 transition-colors" title="Ajouter aux favoris">
+                        <i class="far fa-heart"></i>
+                    </button>
+                </div>
+                <div class="p-6">
+                    <span class="text-sm font-bold text-amber-600 uppercase">Histoire</span>
+                    <h3 class="text-2xl font-bold text-gray-800 mt-2 mb-3">L'histoire des studios Atlas</h3>
+                    <p class="text-gray-600 mb-5 text-sm">Découvrez comment Ouarzazate est devenue la capitale du cinéma en Afrique du Nord.</p>
+                    <a href="article.html" class="font-bold text-amber-700 hover:text-amber-800 flex items-center group">
+                        Lire la suite <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+            </div>
+            <!-- Article Card 2 -->
+             <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover transition-all duration-300">
+                <div class="relative">
+                    <img src="https://source.unsplash.com/800x600/?gladiator,movie" alt="Gladiator Movie Set" class="w-full h-56 object-cover">
+                    <button class="absolute top-4 right-4 bg-black bg-opacity-40 w-10 h-10 rounded-full flex items-center justify-center text-white hover:bg-red-500 transition-colors" title="Ajouter aux favoris">
+                        <i class="far fa-heart"></i>
+                    </button>
+                </div>
+                <div class="p-6">
+                    <span class="text-sm font-bold text-amber-600 uppercase">Blockbusters</span>
+                    <h3 class="text-2xl font-bold text-gray-800 mt-2 mb-3">Films emblématiques tournés ici</h3>
+                    <p class="text-gray-600 mb-5 text-sm">De Gladiator à Game of Thrones, explorez les blockbusters qui ont marqué la région.</p>
+                    <a href="article.html" class="font-bold text-amber-700 hover:text-amber-800 flex items-center group">
+                        Lire la suite <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+            </div>
+            <!-- Article Card 3 -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover transition-all duration-300">
+                <div class="relative">
+                    <img src="https://source.unsplash.com/800x600/?morocco,artisan" alt="Artisan marocain au travail" class="w-full h-56 object-cover">
+                    <button class="absolute top-4 right-4 bg-black bg-opacity-40 w-10 h-10 rounded-full flex items-center justify-center text-white hover:bg-red-500 transition-colors" title="Ajouter aux favoris">
+                        <i class="far fa-heart"></i>
+                    </button>
+                </div>
+                <div class="p-6">
+                    <span class="text-sm font-bold text-amber-600 uppercase">Culture</span>
+                    <h3 class="text-2xl font-bold text-gray-800 mt-2 mb-3">L'artisanat au service du cinéma</h3>
+                    <p class="text-gray-600 mb-5 text-sm">Comment les artisans locaux contribuent à la magie des décors de films.</p>
+                    <a href="article.html" class="font-bold text-amber-700 hover:text-amber-800 flex items-center group">
+                        Lire la suite <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Pagination -->
+        <div class="mt-16 flex justify-center items-center space-x-2">
+            <a href="#" class="px-4 py-2 bg-white border border-gray-300 rounded-lg text-gray-500 hover:bg-gray-100 transition-colors" aria-label="Page précédente">
+                <i class="fas fa-chevron-left"></i>
+            </a>
+            <a href="#" class="px-4 py-2 bg-amber-600 border border-amber-600 text-white rounded-lg font-bold" aria-current="page">1</a>
+            <a href="#" class="px-4 py-2 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 transition-colors">2</a>
+            <a href="#" class="px-4 py-2 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 transition-colors">3</a>
+            <span class="px-4 py-2 text-gray-500">...</span>
+            <a href="#" class="px-4 py-2 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 transition-colors" aria-label="Page suivante">
+                <i class="fas fa-chevron-right"></i>
+            </a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white mt-16">
+        <div class="film-reel"></div>
+        <div class="container mx-auto px-6 py-8 text-center text-gray-500 text-sm">
+            <p>&copy; 2025 Cinéma Atlas Ouarzazate. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('-translate-x-full');
+        });
+    </script>
+</body>
+</html>
