@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinéma Atlas Ouarzazate - Découvrez la magie du cinéma</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Open+Sans:wght@300;400;600&display=swap');
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+        }
+        
+        h1, h2, h3, .logo {
+            font-family: 'Cinzel', serif;
+        }
+        
+        .hero-bg {
+            background: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(139,69,19,0.5) 100%),
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23D4A574" width="1200" height="600"/><path fill="%23C19A6B" d="M0 300L50 280L100 290L150 270L200 285L250 275L300 295L350 280L400 290L450 275L500 285L550 270L600 280L650 295L700 285L750 275L800 290L850 280L900 270L950 285L1000 295L1050 280L1100 290L1150 275L1200 285V600H0Z"/></svg>');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .geometric-border {
+            border-top: 3px solid #D4A574;
+            border-bottom: 3px solid #D4A574;
+            position: relative;
+        }
+        
+        .geometric-border::before,
+        .geometric-border::after {
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 3px;
+            background: #8B4513;
+        }
+        
+        .geometric-border::before {
+            top: -3px;
+            left: 0;
+        }
+        
+        .geometric-border::after {
+            bottom: -3px;
+            right: 0;
+        }
+        
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+        
+        .film-reel {
+            background-image: repeating-linear-gradient(
+                90deg,
+                #1a1a1a 0px,
+                #1a1a1a 10px,
+                #D4A574 10px,
+                #D4A574 12px
+            );
+            height: 8px;
+        }
+    </style>
+</head>
+<body class="bg-stone-50">
+    <!-- Header / Navbar -->
+    <header class="bg-gradient-to-r from-stone-900 via-amber-900 to-stone-900 text-white shadow-2xl sticky top-0 z-50">
+        <div class="film-reel"></div>
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex flex-wrap items-center justify-between">
+                <!-- Logo -->
+                <div class="logo text-2xl md:text-3xl font-bold flex items-center space-x-2">
+                    <i class="fas fa-film text-amber-400"></i>
+                    <span class="bg-gradient-to-r from-amber-400 to-amber-200 bg-clip-text text-transparent">
+                        Cinéma Atlas
+                    </span>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-white hover:text-amber-400 transition">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+                
+                <!-- Navigation Links -->
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="#" class="hover:text-amber-400 transition font-semibold">Accueil</a>
+                    <a href="#" class="hover:text-amber-400 transition">Histoire du cinéma</a>
+                    <a href="#" class="hover:text-amber-400 transition">Studios & Lieux</a>
+                    <a href="#" class="hover:text-amber-400 transition">Événements</a>
+                    <a href="#" class="hover:text-amber-400 transition">Blog</a>
+                    <a href="#" class="hover:text-amber-400 transition">Contact</a>
+                </div>
+                
+                <!-- Search & Language -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <div class="relative">
+                        <input type="text" placeholder="Rechercher..." 
+                               class="bg-stone-800 text-white px-4 py-2 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-amber-400">
+                        <i class="fas fa-search absolute right-3 top-3 text-amber-400"></i>
+                    </div>
+                    <select class="bg-stone-800 text-white px-3 py-2 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-amber-400">
+                        <option>FR</option>
+                        <option>EN</option>
+                    </select>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-bg text-white py-32 md:py-48">
+        <div class="container mx-auto px-4 text-center">
+            <div class="max-w-4xl mx-auto animate-fade-in">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                    Découvrez la magie du cinéma à Ouarzazate
+                </h1>
+                <p class="text-xl md:text-2xl mb-10 text-amber-100 font-light">
+                    Le Hollywood de l'Afrique vous ouvre ses portes
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button class="bg-amber-600 hover:bg-amber-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition transform hover:scale-105 shadow-xl">
+                        <i class="fas fa-compass mr-2"></i>
+                        Explorer le patrimoine
+                    </button>
+                    <button class="bg-transparent border-2 border-white hover:bg-white hover:text-stone-900 text-white px-8 py-4 rounded-lg font-semibold text-lg transition transform hover:scale-105">
+                        <i class="fas fa-map-marked-alt mr-2"></i>
+                        Planifier ma visite
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Articles / Videos Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-stone-900 mb-4 geometric-border inline-block pb-4">
+                    Contenus à la une
+                </h2>
+                <p class="text-lg text-stone-600 mt-6">Plongez dans l'histoire du cinéma marocain</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Article Card 1 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-xl card-hover">
+                    <div class="h-48 bg-gradient-to-br from-amber-600 to-stone-800 flex items-center justify-center">
+                        <i class="fas fa-camera-retro text-6xl text-white opacity-50"></i>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs font-semibold text-amber-600 uppercase tracking-wide">Article</span>
+                        <h3 class="text-xl font-bold text-stone-900 mt-2 mb-3">
+                            L'histoire des studios Atlas
+                        </h3>
+                        <p class="text-stone-600 mb-4">
+                            Découvrez comment Ouarzazate est devenue la capitale du cinéma en Afrique du Nord...
+                        </p>
+                        <button class="text-amber-600 hover:text-amber-800 font-semibold flex items-center transition">
+                            Lire l'article
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Video Card 2 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-xl card-hover">
+                    <div class="h-48 bg-gradient-to-br from-stone-700 to-amber-700 flex items-center justify-center relative">
+                        <i class="fas fa-play-circle text-6xl text-white opacity-75"></i>
+                        <span class="absolute top-3 right-3 bg-red-600 text-white px-2 py-1 rounded text-xs font-bold">
+                            <i class="fas fa-video mr-1"></i>VIDÉO
+                        </span>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs font-semibold text-red-600 uppercase tracking-wide">Vidéo</span>
+                        <h3 class="text-xl font-bold text-stone-900 mt-2 mb-3">
+                            Visite guidée des studios
+                        </h3>
+                        <p class="text-stone-600 mb-4">
+                            Une immersion exclusive dans les coulisses des plus grands décors de cinéma...
+                        </p>
+                        <button class="text-amber-600 hover:text-amber-800 font-semibold flex items-center transition">
+                            Regarder la vidéo
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Article Card 3 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-xl card-hover">
+                    <div class="h-48 bg-gradient-to-br from-amber-800 to-stone-900 flex items-center justify-center">
+                        <i class="fas fa-landmark text-6xl text-white opacity-50"></i>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs font-semibold text-amber-600 uppercase tracking-wide">Article</span>
+                        <h3 class="text-xl font-bold text-stone-900 mt-2 mb-3">
+                            Films emblématiques tournés à Ouarzazate
+                        </h3>
+                        <p class="text-stone-600 mb-4">
+                            De Gladiator à Game of Thrones, explorez les blockbusters qui ont marqué la région...
+                        </p>
+                        <button class="text-amber-600 hover:text-amber-800 font-semibold flex items-center transition">
+                            Lire l'article
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <button class="bg-stone-900 hover:bg-amber-700 text-white px-8 py-3 rounded-lg font-semibold transition">
+                    Voir tous les articles
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Upcoming Events Section -->
+    <section class="py-20 bg-stone-100">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-stone-900 mb-4">
+                    Événements à venir
+                </h2>
+                <p class="text-lg text-stone-600">Ne manquez pas les prochains festivals et visites</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Event Card 1 -->
+                <div class="bg-white rounded-lg p-6 shadow-lg hover:shadow-2xl transition">
+                    <div class="flex items-start space-x-4">
+                        <div class="bg-amber-600 text-white rounded-lg p-4 text-center min-w-[80px]">
+                            <div class="text-3xl font-bold">15</div>
+                            <div class="text-sm">NOV</div>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-xl font-bold text-stone-900 mb-2">
+                                Festival du Film d'Ouarzazate
+                            </h3>
+                            <p class="text-stone-600 text-sm mb-3">
+                                <i class="fas fa-map-marker-alt text-amber-600 mr-1"></i>
+                                Atlas Studios
+                            </p>
+                            <button class="text-amber-600 hover:text-amber-800 font-semibold text-sm">
+                                En savoir plus →
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Event Card 2 -->
+                <div class="bg-white rounded-lg p-6 shadow-lg hover:shadow-2xl transition">
+                    <div class="flex items-start space-x-4">
+                        <div class="bg-stone-700 text-white rounded-lg p-4 text-center min-w-[80px]">
+                            <div class="text-3xl font-bold">22</div>
+                            <div class="text-sm">NOV</div>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-xl font-bold text-stone-900 mb-2">
+                                Visite guidée des décors historiques
+                            </h3>
+                            <p class="text-stone-600 text-sm mb-3">
+                                <i class="fas fa-map-marker-alt text-amber-600 mr-1"></i>
+                                Kasbah de Taourirt
+                            </p>
+                            <button class="text-amber-600 hover:text-amber-800 font-semibold text-sm">
+                                Réserver →
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Event Card 3 -->
+                <div class="bg-white rounded-lg p-6 shadow-lg hover:shadow-2xl transition">
+                    <div class="flex items-start space-x-4">
+                        <div class="bg-amber-700 text-white rounded-lg p-4 text-center min-w-[80px]">
+                            <div class="text-3xl font-bold">05</div>
+                            <div class="text-sm">DÉC</div>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-xl font-bold text-stone-900 mb-2">
+                                Rencontre avec des réalisateurs locaux
+                            </h3>
+                            <p class="text-stone-600 text-sm mb-3">
+                                <i class="fas fa-map-marker-alt text-amber-600 mr-1"></i>
+                                Centre culturel
+                            </p>
+                            <button class="text-amber-600 hover:text-amber-800 font-semibold text-sm">
+                                S'inscrire →
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <button class="bg-amber-600 hover:bg-amber-700 text-white px-8 py-3 rounded-lg font-semibold transition">
+                    Voir tous les événements
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cultural Map Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-4xl md:text-5xl font-bold text-stone-900 mb-6">
+                        Le patrimoine cinématographique de Ouarzazate
+                    </h2>
+                    <p class="text-lg text-stone-600 mb-6">
+                        Située au pied des montagnes de l'Atlas, Ouarzazate est devenue une destination incontournable pour les productions cinématographiques internationales. Ses paysages désertiques spectaculaires et ses studios de renommée mondiale ont accueilli plus de 200 films et séries.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-check-circle text-amber-600 text-xl mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-stone-900">Atlas Studios</h4>
+                                <p class="text-stone-600">Le plus grand studio de cinéma au monde</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-check-circle text-amber-600 text-xl mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-stone-900">Kasbah Aït Ben Haddou</h4>
+                                <p class="text-stone-600">Site UNESCO et décor de cinéma emblématique</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-check-circle text-amber-600 text-xl mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-stone-900">CLA Studios</h4>
+                                <p class="text-stone-600">Studios modernes pour productions internationales</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-stone-200 rounded-xl p-8 shadow-2xl">
+                    <div class="bg-amber-100 rounded-lg h-96 flex items-center justify-center">
+                        <div class="text-center">
+                            <i class="fas fa-map-marked-alt text-8xl text-amber-600 opacity-50 mb-4"></i>
+                            <p class="text-stone-600 font-semibold">Carte interactive</p>
+                            <p class="text-stone-500 text-sm">Studios et lieux de tournage</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-stone-900 text-white py-12">
+        <div class="film-reel mb-8"></div>
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <!-- About -->
+                <div>
+                    <h3 class="logo text-2xl font-bold mb-4 text-amber-400">Cinéma Atlas</h3>
+                    <p class="text-stone-400 text-sm">
+                        Préserver et promouvoir le patrimoine cinématographique de Ouarzazate.
+                    </p>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-bold mb-4 text-amber-400">Liens rapides</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="text-stone-400 hover:text-amber-400 transition">À propos</a></li>
+                        <li><a href="#" class="text-stone-400 hover:text-amber-400 transition">Mentions légales</a></li>
+                        <li><a href="#" class="text-stone-400 hover:text-amber-400 transition">Politique de confidentialité</a></li>
+                        <li><a href="#" class="text-stone-400 hover:text-amber-400 transition">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Resources -->
+                <div>
+                    <h4 class="font-bold mb-4 text-amber-400">Ressources</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="text-stone-400 hover:text-amber-400 transition">Guide touristique</a></li>
+                        <li><a href="#" class="text-stone-400 hover:text-amber-400 transition">Galerie photos</a></li>
+                        <li><a href="#" class="text-stone-400 hover:text-amber-400 transition">FAQ</a></li>
+                        <li><a href="#" class="text-stone-400 hover:text-amber-400 transition">Partenaires</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact & Social -->
+                <div>
+                    <h4 class="font-bold mb-4 text-amber-400">Nous suivre</h4>
+                    <div class="flex space-x-4 mb-4">
+                        <a href="#" class="text-stone-400 hover:text-amber-400 transition text-xl">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="text-stone-400 hover:text-amber-400 transition text-xl">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-stone-400 hover:text-amber-400 transition text-xl">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" class="text-stone-400 hover:text-amber-400 transition text-xl">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                    <p class="text-stone-400 text-sm">
+                        <i class="fas fa-envelope mr-2"></i>
+                        contact@cinema-atlas.ma
+                    </p>
+                </div>
+            </div>
+            
+            <div class="border-t border-stone-800 pt-8 text-center text-stone-500 text-sm">
+                <p>&copy; 2025 Cinéma Atlas Ouarzazate. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

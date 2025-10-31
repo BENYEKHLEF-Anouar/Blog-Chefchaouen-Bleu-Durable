@@ -22,7 +22,7 @@ Difficulté à trouver des informations fiables et bien présentées sur le patr
 **Environnement :**  
 Smartphone Android et PC portable, utilise Wi-Fi dans les hôtels et connexion mobile limitée en déplacement.
 
-----
+---
 
 ### Persona – Jeune créateur
 
@@ -45,15 +45,15 @@ Manque de ressources locales accessibles et adaptées aux débutants, difficult�
 Smartphone Android pour les recherches et les partages rapides, PC portable pour le montage et l’écriture de scénarios, connexion Wi-Fi à domicile et réseau 4G limité à l’extérieur.
 
 
--------------
+---
 
 ## Définir le problème et la solution
 
-### Problème
+### Problem
 
 Comment préserver le patrimoine cinématographique de Ouarzazate et soutenir les jeunes créateurs locaux ?
 
-### Énoncé du problème (Problem Statement)
+### Énoncé du problème
 
 **Pour le Touriste culturel**, qui a du mal à trouver des informations fiables et centralisées sur le patrimoine cinématographique de Ouarzazate,  
 nous voulons créer un blog et une plateforme multimédia qui regroupent articles, vidéos et informations pratiques sur les studios et le cinéma local,  
@@ -63,9 +63,33 @@ afin qu’il puisse découvrir l’histoire cinématographique et planifier ses 
 nous voulons fournir un espace en ligne proposant tutoriels, opportunités de financement et partage de projets,  
 afin qu'il puisse apprendre, exposer ses créations et construire un réseau local sans perdre de temps.
 
--------------
+---
 
-## Diagramme de cas d'utilisation
+### Tableau des fonctionnalités (Méthode MoSCoW)
+
+| Fonctionnalité                  | Description                                           | Priorité   | Justification                                    |
+| ------------------------------- | ----------------------------------------------------- | ---------- | ------------------------------------------------ |
+| Consulter la liste des articles | Voir les articles récents sur le cinéma de Ouarzazate | **Must**   | Fonction principale du blog                      |
+| Lire un article détaillé        | Accéder au contenu complet d’un article               | **Must**   | Permet d’approfondir la découverte du patrimoine |
+| Rechercher un article           | Trouver rapidement un article précis                  | **Should** | Améliore l’expérience utilisateur                |
+| Sauvegarder un article          | Enregistrer un article pour le relire plus tard       | **Should** | Facilite la lecture différée pour les visiteurs  |
+| Partager un article             | Envoyer ou publier le lien sur les réseaux sociaux    | **Could**  | Renforce la visibilité du blog                   |
+| Gérer les articles              | Ajouter, modifier ou supprimer un article             | **Must**   | Fonction essentielle pour l’administrateur       |
+
+
+### Liste des cas d’utilisation (UC)
+
+| ID  | Acteur   | Cas d’utilisation                                   | Priorité |
+| --- | -------- | --------------------------------------------------- | -------- |
+| UC1 | Touriste | Consulter la liste des articles                     | Must     |
+| UC2 | Touriste | Lire un article en détail                           | Must     |
+| UC3 | Touriste | Rechercher un article par mot-clé                   | Should   |
+| UC4 | Touriste | Sauvegarder un article                              | Should   |
+| UC5 | Touriste | Partager un article sur les réseaux sociaux         | Could    |
+| UC6 | Admin    | Gérer les articles (ajouter / modifier / supprimer) | Must     |
+
+
+### Diagramme de cas d'utilisation
 
 ![Diagramme de cas d'utilisation](images/Diagramme_cas_utilisation_Blog.png)
 
