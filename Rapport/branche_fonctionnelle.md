@@ -75,34 +75,7 @@ afin qu'il puisse apprendre, exposer ses créations et construire un réseau loc
 
 ## Diagramme de cas d'utilisation
 
-```
-@startuml
-title Diagramme de cas d’utilisation -- Blog: Ouarzazate - Cinéma Atlas
-
-actor "Touriste culturel" as Touriste
-actor "Administrateur" as Admin
-
-rectangle "Blog Ouarzazate" {
-  
-  (Consulter la liste des articles) as UC1
-  (Lire un article en détail) as UC2
-  (Rechercher un article) as UC3
-  (Sauvegarder un article) as UC4
-  (Partager un article) as UC5
-  (Gérer les articles) as UC6
-}
-
-Touriste --> UC1
-Touriste --> UC2
-Touriste --> UC3
-Touriste --> UC4
-Touriste --> UC5
-
-Admin --> UC6
-
-@enduml
-```
-
+![Diagramme de cas d'utilisation](https://img.plantuml.biz/plantuml/png/RP8xQiGm48PxW-ymk4eA5zbNaIBine4qWOGy3Z18WrSWop0QfTWGo3LoX3s7RvAJH5Ayon9leUQRZtyUQEq5MK9doqACM88xWorZrn5e0eKUzC_NTn1ZZKSnlOEwXblRjzVm691tk4CXgA4nRjXt21knwCkYB519pr2zze6DZueALWAJhI1c7kXHs-ZEk4WufWNEJaOfYKa9kZRELgN69tqh-2WBWFGkcjxvs88OB8BDBJLvYCiPPSbVfiYtvYgx3uO9WZiKWHpeOIzexAZDilPCQakSteay6lDil61ufnPPdrCMMNcA4DjpzMMktmzxJaDFPrsLnMVQ_tZ2khxvM-4VcKt8V48M4x9CsVd88rWbi2Qdus_u1G00)
 
 Ce diagramme de cas d'utilisation illustre les principales fonctionnalités de notre MVP système et leurs relations avec les différents types d'utilisateurs. Il met en évidence :
 
