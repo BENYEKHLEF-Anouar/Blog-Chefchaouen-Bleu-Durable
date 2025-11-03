@@ -12,7 +12,6 @@ Découvrir l’histoire cinématographique de Ouarzazate et les studios locaux, 
 
 **Besoins clés :**  
 * Accéder facilement à des articles et vidéos sur l’histoire du cinéma à Ouarzazate.
-* Trouver des informations sur les visites guidées, événements et festivals locaux.
 * Sauvegarder ou partager les contenus intéressants avec ses amis ou sur les réseaux sociaux.
 * Accéder aux contenus même avec une connexion internet limitée lors des déplacements.
 
