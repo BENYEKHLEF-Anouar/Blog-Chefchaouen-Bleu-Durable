@@ -44,6 +44,29 @@ Manque de ressources locales accessibles et adaptées aux débutants, difficult�
 **Environnement :**  
 Smartphone Android pour les recherches et les partages rapides, PC portable pour le montage et l’écriture de scénarios, connexion Wi-Fi à domicile et réseau 4G limité à l’extérieur.
 
+---
+
+### Persona – Rédacteur / Éditeur de contenu
+
+**Âge / contexte :**
+35 ans, journaliste ou passionné de cinéma marocain, travaille en freelance ou pour une institution culturelle locale. Il connaît bien l’histoire du cinéma à Ouarzazate et aime partager des anecdotes, interviews et reportages sur les tournages. Il utilise principalement un ordinateur portable pour la rédaction et un smartphone pour prendre des notes et publier rapidement sur les réseaux sociaux.
+
+**Objectif principal :**
+Créer et publier des articles de qualité sur le patrimoine cinématographique de Ouarzazate, valoriser les studios locaux et faire découvrir les talents émergents.
+
+**Besoins clés :**
+* Interface simple pour rédiger, modifier et publier des articles.
+* Possibilité d’ajouter des images et vidéos facilement.
+* Gestion claire des brouillons et des articles publiés.
+* Outils de suivi (vues, partages, commentaires).
+* Accès rapide au site depuis un ordinateur ou un mobile.
+
+**Frustration :**
+Perte de temps avec des outils de publication compliqués ou peu intuitifs. Difficulté à mettre en forme le contenu multimédia ou à vérifier sa mise en page avant publication.
+
+**Environnement :**
+Ordinateur portable (Mac ou Windows), smartphone Android, connexion Wi-Fi à domicile ou dans les cafés. Utilise des outils de bureautique et de gestion de contenus (WordPress, Google Docs, Canva, etc.).
+
 
 ---
 
