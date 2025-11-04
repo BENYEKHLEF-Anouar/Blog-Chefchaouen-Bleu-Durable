@@ -17,7 +17,7 @@ Allow visitors (mainly tourists and cinema enthusiasts) to explore Ouarzazate’
 
 ### Header / Navbar
 *   **Logo:** “Cinéma Atlas Ouarzazate”
-*   **Menu Links:** “Accueil”, “Histoire du cinéma”, “Studios & Lieux”, “Événements”, “Blog”, “Contact”
+*   **Menu Links:** “Accueil”, “Histoire du cinéma”, “Studios & Lieux”, “Blog”, “Contact”
 *   **Utilities:** Search bar and language switcher (FR/EN)
 
 ### Hero Section
@@ -27,11 +27,13 @@ Allow visitors (mainly tourists and cinema enthusiasts) to explore Ouarzazate’
 
 ### Featured Articles / Videos
 *   **Layout:** Grid of cards with images, titles, and short descriptions.
-*   **Buttons:** “Lire l’article” / “Regarder la vidéo”
+*   **Buttons:** “Lire l’article” / “Regarder la vidéo”, “Sauvegarder”, “Partager”
 
-### Upcoming Events / Visits
-*   **Layout:** Carousel or grid of event cards (date, place, description).
-*   **Button:** “Voir tous les événements”
+<!-- ### Young Creator Hub (for Jeune Créateur)
+*   **Goal:** Provide resources for aspiring filmmakers and artists.
+*   **Layout:** Sections for "Tutoriels", "Opportunités (stages, financements)", and "Projets de la communauté".
+*   **Content:** Cards for tutorials, listings for opportunities, and a gallery for community projects.
+*   **Buttons:** "Voir tous les tutoriels", "Soumettre un projet".
 
 ### Cultural Map / Info Section
 *   **Map:** Small map of Ouarzazate with main film studios highlighted.
@@ -39,7 +41,7 @@ Allow visitors (mainly tourists and cinema enthusiasts) to explore Ouarzazate’
 
 ### Footer
 *   **Links:** “À propos”, “Mentions légales”, “Réseaux sociaux”
-*   **Contact:** Contact email and copyright.
+*   **Contact:** Contact email and copyright. -->
 
 ## 2. Private Side (for Admin)
 
@@ -61,10 +63,7 @@ Enable administrators to manage articles, videos, users, and events.
 ### Admin Dashboard
 *   **Sidebar Navigation Links:**
     *   Tableau de bord
-    *   Gestion des articles
-    *   Gestion des vidéos
-    *   Gestion des utilisateurs
-    *   Gestion des événements
+    *   Gestion des articles (incluant rédaction, modification, publication)
 *   **Main Content Area:**
     *   Quick stats (total articles, users, upcoming events).
     *   Table for managing items with “Edit” and “Delete” buttons.

@@ -119,7 +119,6 @@ Ce diagramme de cas d'utilisation illustre les principales fonctionnalités de n
 
 **Pour le Touriste Culturel :**
 * Consultation des articles et vidéos sur le patrimoine cinématographique
-* Recherche d'informations touristiques (visites, événements)
 * Sauvegarde de contenus intéressants
 * Partage sur les réseaux sociaux
 
