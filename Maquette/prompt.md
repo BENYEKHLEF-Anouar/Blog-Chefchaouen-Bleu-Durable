@@ -1,6 +1,6 @@
 # Organized Maquette Prompt: Ouarzazate – Cinéma Atlas Blog
 
-This document organizes the requirements for creating a modern, responsive HTML + Tailwind CSS maquette for the "Ouarzazate – Cinéma Atlas" blog.
+After reading and processing the use case diagram and the list of features provided, this document organizes the requirements for creating a modern and responsive HTML + Tailwind CSS mockup for the blog "Ouarzazate – Cinéma Atlas".
 
 ## 1. Public Side (for Touriste Culturel)
 
@@ -92,6 +92,10 @@ Generate the following files:
 *   [`article.html`](Maquette/article.html): Example article page
 *   [`dashboard.html`](Maquette/admin_dashboard.html): Admin main panel
 *   [`login.html`](Maquette/admin_login.html): Admin login page
+*   [`admin_articles_list.html`](Maquette/admin_articles_list.html): Admin articles list page
+*   [`admin_article_edit.html`](Maquette/admin_article_edit.html): Admin article edit page
+*   [`blog.html`](Maquette/blog.html): Public blog listing page
+*   [`user_login.html`](Maquette/user_login.html): Public user login page
 
 Each page should be well-commented, with clear section labels for easy iteration.
 
