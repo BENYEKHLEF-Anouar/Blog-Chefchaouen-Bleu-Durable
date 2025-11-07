@@ -33,6 +33,7 @@ Développer ses compétences en réalisation, montage et production de films, to
 
 **Besoins clés :**  
 * Accéder à des tutoriels simples et pratiques sur la réalisation, le montage et les effets spéciaux.
+* Participer à des événements locaux (ateliers, festivals, projections) pour apprendre et rencontrer d’autres créateurs.
 * Découvrir des opportunités de financement, de stages et de collaborations locales.
 * Partager ses créations facilement et obtenir des retours constructifs.
 * Consulter des articles et des vidéos même avec une connexion instable.
