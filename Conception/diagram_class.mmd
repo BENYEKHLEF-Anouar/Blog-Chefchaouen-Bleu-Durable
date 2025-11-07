@@ -39,6 +39,7 @@ classDiagram
       +shares : Integer = 0
       +status : ArticleStatus
       +author_id : FK → User
+      +category_id : FK → Category
       +published_at : DateTime?
       +is_moderated : Boolean = false
       +created_at : DateTime
@@ -75,6 +76,14 @@ classDiagram
       +tag_id : FK → Tag
     }
 
+    %% --- New Category table ---
+    class Category {
+      +category_id : PK
+      +name : String (unique)
+      +slug : String (unique)
+      +description: Text
+    }
+
     %% --- Relationships ---
     User "1" --> "0..*" Article : écrit >
     User "0..1" --> "0..*" Comment : écrit >
@@ -83,8 +92,9 @@ classDiagram
     Article "1" --> "0..*" Comment : reçoit >
     Article "1" --> "0..*" Favorite : est aimé par >
     Article "1" --> "0..*" ArticleTag : possède >
+    Article "*" --> "1" Category : appartient à >
 
     Tag "1" --> "0..*" ArticleTag : catégorise >
 
     %% --- Notes ---
-    note for User "• Visitor / Touriste : Lecture uniquement\n• Créateur : Partager ses projets, commenter\n• Rédacteur : Publier des articles et médias\n• Admin : Modérer, tout gérer"
+    %% note for User "• Visitor / Touriste : Lecture uniquement\n• Créateur : Partager ses projets, commenter\n• Rédacteur : Publier des articles et médias\n• Admin : Modérer, tout gérer"

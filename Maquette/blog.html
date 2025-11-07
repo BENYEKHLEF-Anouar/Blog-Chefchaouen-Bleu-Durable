@@ -62,6 +62,7 @@
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="index.html" class="hover:text-amber-400 transition-colors">Accueil</a>
                     <a href="blog.html" class="text-amber-400 font-semibold">Blog</a>
+                    <a href="favorites.html" class="hover:text-amber-400 transition-colors">Favoris</a>
                     <!-- <a href="#" class="hover:text-amber-400 transition-colors">Studios</a> -->
                     <!-- <a href="#" class="hover:text-amber-400 transition-colors">Événements</a> -->
                     <!-- <a href="#" class="hover:text-amber-400 transition-colors">Contact</a> -->
@@ -82,6 +83,7 @@
         <div id="mobile-menu" class="mobile-menu md:hidden bg-gray-800 absolute w-full transform -translate-x-full">
             <a href="index.html" class="block px-6 py-3 hover:text-amber-400">Accueil</a>
             <a href="blog.html" class="block px-6 py-3 text-amber-400 font-semibold">Blog</a>
+            <a href="favorites.html" class="block px-6 py-3 hover:text-amber-400">Favoris</a>
             <!-- <a href="#" class="block px-6 py-3 hover:text-amber-400">Studios</a> -->
             <!-- <a href="#" class="block px-6 py-3 hover:text-amber-400">Événements</a> -->
             <!-- <a href="#" class="block px-6 py-3 hover:text-amber-400">Contact</a> -->
@@ -97,7 +99,6 @@
                 marocain.</p>
         </div>
 
-        <!-- Search Bar -->
         <!-- Search Bar -->
         <div class="max-w-2xl mx-auto mb-8">
             <div class="relative">
@@ -185,7 +186,7 @@
         <!-- Articles Grid -->
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
             <!-- Article Card 1 -->
-            <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover transition-all duration-300">
+            <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover transition-all duration-300 flex flex-col">
                 <div class="relative">
                     <img src="https://source.unsplash.com/800x600/?cinema,studio" alt="Studio Atlas"
                         class="w-full h-56 object-cover">
@@ -195,20 +196,29 @@
                         <i class="far fa-heart"></i>
                     </button>
                 </div>
-                <div class="p-6">
-                    <span class="text-sm font-bold text-amber-600 uppercase">Histoire</span>
-                    <h3 class="text-2xl font-bold text-gray-800 mt-2 mb-3">L'histoire des studios Atlas</h3>
-                    <p class="text-gray-600 mb-5 text-sm">Découvrez comment Ouarzazate est devenue la capitale du cinéma
-                        en Afrique du Nord.</p>
-                    <a href="article.html"
-                        class="font-bold text-amber-700 hover:text-amber-800 flex items-center group">
-                        Lire la suite <i
-                            class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
-                    </a>
+                <div class="p-6 flex flex-col flex-grow">
+                    <div class="flex-grow">
+                        <span class="text-sm font-bold text-amber-600 uppercase">Histoire</span>
+                        <h3 class="text-2xl font-bold text-gray-800 mt-2 mb-3">L'histoire des studios Atlas</h3>
+                        <p class="text-gray-600 mb-5 text-sm">Découvrez comment Ouarzazate est devenue la capitale du cinéma
+                            en Afrique du Nord.</p>
+                    </div>
+                    <div>
+                        <div class="flex flex-wrap gap-2 mb-5">
+                            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">#Cinéma</span>
+                            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">#Maroc</span>
+                            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">#Ouarzazate</span>
+                        </div>
+                        <a href="article.html"
+                            class="font-bold text-amber-700 hover:text-amber-800 flex items-center group">
+                            Lire la suite <i
+                                class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
             <!-- Article Card 2 -->
-            <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover transition-all duration-300">
+            <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover transition-all duration-300 flex flex-col">
                 <div class="relative">
                     <img src="https://source.unsplash.com/800x600/?gladiator,movie" alt="Gladiator Movie Set"
                         class="w-full h-56 object-cover">
@@ -218,20 +228,29 @@
                         <i class="far fa-heart"></i>
                     </button>
                 </div>
-                <div class="p-6">
-                    <span class="text-sm font-bold text-amber-600 uppercase">Blockbusters</span>
-                    <h3 class="text-2xl font-bold text-gray-800 mt-2 mb-3">Films emblématiques tournés ici</h3>
-                    <p class="text-gray-600 mb-5 text-sm">De Gladiator à Game of Thrones, explorez les blockbusters qui
-                        ont marqué la région.</p>
-                    <a href="article.html"
-                        class="font-bold text-amber-700 hover:text-amber-800 flex items-center group">
-                        Lire la suite <i
-                            class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
-                    </a>
+                <div class="p-6 flex flex-col flex-grow">
+                     <div class="flex-grow">
+                        <span class="text-sm font-bold text-amber-600 uppercase">Blockbusters</span>
+                        <h3 class="text-2xl font-bold text-gray-800 mt-2 mb-3">Films emblématiques tournés ici</h3>
+                        <p class="text-gray-600 mb-5 text-sm">De Gladiator à Game of Thrones, explorez les blockbusters qui
+                            ont marqué la région.</p>
+                    </div>
+                     <div>
+                        <div class="flex flex-wrap gap-2 mb-5">
+                            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">#Gladiator</span>
+                            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">#GameOfThrones</span>
+                            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">#Films</span>
+                        </div>
+                        <a href="article.html"
+                            class="font-bold text-amber-700 hover:text-amber-800 flex items-center group">
+                            Lire la suite <i
+                                class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
             <!-- Article Card 3 -->
-            <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover transition-all duration-300">
+            <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover transition-all duration-300 flex flex-col">
                 <div class="relative">
                     <img src="https://source.unsplash.com/800x600/?morocco,artisan" alt="Artisan marocain au travail"
                         class="w-full h-56 object-cover">
@@ -241,16 +260,25 @@
                         <i class="far fa-heart"></i>
                     </button>
                 </div>
-                <div class="p-6">
-                    <span class="text-sm font-bold text-amber-600 uppercase">Culture</span>
-                    <h3 class="text-2xl font-bold text-gray-800 mt-2 mb-3">L'artisanat au service du cinéma</h3>
-                    <p class="text-gray-600 mb-5 text-sm">Comment les artisans locaux contribuent à la magie des décors
-                        de films.</p>
-                    <a href="article.html"
-                        class="font-bold text-amber-700 hover:text-amber-800 flex items-center group">
-                        Lire la suite <i
-                            class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
-                    </a>
+                <div class="p-6 flex flex-col flex-grow">
+                     <div class="flex-grow">
+                        <span class="text-sm font-bold text-amber-600 uppercase">Culture</span>
+                        <h3 class="text-2xl font-bold text-gray-800 mt-2 mb-3">L'artisanat au service du cinéma</h3>
+                        <p class="text-gray-600 mb-5 text-sm">Comment les artisans locaux contribuent à la magie des décors
+                            de films.</p>
+                    </div>
+                    <div>
+                        <div class="flex flex-wrap gap-2 mb-5">
+                            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">#Artisanat</span>
+                            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">#Décors</span>
+                             <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">#CultureLocale</span>
+                        </div>
+                        <a href="article.html"
+                            class="font-bold text-amber-700 hover:text-amber-800 flex items-center group">
+                            Lire la suite <i
+                                class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>

@@ -83,6 +83,7 @@
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="index.html" class="hover:text-amber-400 transition-colors duration-300 font-semibold">Accueil</a>
                     <a href="blog.html" class="hover:text-amber-400 transition-colors duration-300">Blog</a>
+                    <a href="favorites.html" class="hover:text-amber-400 transition-colors duration-300">Favoris</a>
                     <!-- <a href="#" class="hover:text-amber-400 transition-colors duration-300">Studios</a> -->
                     <!-- <a href="#" class="hover:text-amber-400 transition-colors duration-300">Événements</a> -->
                     <!-- <a href="#" class="hover:text-amber-400 transition-colors duration-300">Contact</a> -->
@@ -98,6 +99,16 @@
                 </button>
             </div>
         </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="mobile-menu md:hidden bg-gray-800 absolute w-full transform -translate-x-full">
+            <a href="index.html" class="block px-6 py-3 hover:text-amber-400">Accueil</a>
+            <a href="blog.html" class="block px-6 py-3 hover:text-amber-400">Blog</a>
+            <a href="favorites.html" class="block px-6 py-3 hover:text-amber-400">Favoris</a>
+            <!-- <a href="#" class="block px-6 py-3 hover:text-amber-400">Studios</a> -->
+            <!-- <a href="#" class="block px-6 py-3 hover:text-amber-400">Événements</a> -->
+            <!-- <a href="#" class="block px-6 py-3 hover:text-amber-400">Contact</a> -->
+            <a href="user_login.html" class="block px-6 py-3 hover:text-amber-400">Connexion</a>
+        </div>
     </header>
 
     <!-- Hero Section -->
@@ -130,54 +141,81 @@
             
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
                 <!-- Article Card 1 -->
-                <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover">
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover flex flex-col">
                     <div class="relative">
                         <img src="https://source.unsplash.com/800x600/?cinema,studio" alt="Studio Atlas" class="w-full h-56 object-cover">
                         <button class="absolute top-4 right-4 bg-black bg-opacity-40 w-10 h-10 rounded-full flex items-center justify-center text-white hover:bg-red-500 transition-colors" title="Ajouter aux favoris">
                             <i class="far fa-heart"></i>
                         </button>
                     </div>
-                    <div class="p-6">
-                        <span class="text-sm font-bold text-amber-600 uppercase">Histoire</span>
-                        <h3 class="text-2xl font-bold text-gray-800 mt-2 mb-3">L'histoire des studios Atlas</h3>
-                        <p class="text-gray-600 mb-5">Découvrez comment Ouarzazate est devenue la capitale du cinéma en Afrique du Nord.</p>
-                        <a href="article.html" class="font-bold text-amber-700 hover:text-amber-800 flex items-center group">
-                            Lire l'article <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
-                        </a>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <div class="mb-auto">
+                            <span class="text-sm font-bold text-amber-600 uppercase">Histoire</span>
+                            <h3 class="text-2xl font-bold text-gray-800 mt-2 mb-3">L'histoire des studios Atlas</h3>
+                            <p class="text-gray-600 mb-5">Découvrez comment Ouarzazate est devenue la capitale du cinéma en Afrique du Nord.</p>
+                        </div>
+                        <div class="mt-4">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">#Cinéma</span>
+                                <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">#Maroc</span>
+                                <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">#Ouarzazate</span>
+                            </div>
+                            <a href="article.html" class="font-bold text-amber-700 hover:text-amber-800 flex items-center group mt-6">
+                                Lire l'article <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <!-- Article Card 2 -->
-                <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover">
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover flex flex-col">
                     <div class="relative">
                         <img src="https://source.unsplash.com/800x600/?film,set" alt="Film Set" class="w-full h-56 object-cover">
                         <button class="absolute top-4 right-4 bg-black bg-opacity-40 w-10 h-10 rounded-full flex items-center justify-center text-white hover:bg-red-500 transition-colors" title="Ajouter aux favoris">
                             <i class="far fa-heart"></i>
                         </button>
                     </div>
-                    <div class="p-6">
-                        <span class="text-sm font-bold text-amber-600 uppercase">Coulisses</span>
-                        <h3 class="text-2xl font-bold text-gray-800 mt-2 mb-3">Visite guidée des studios</h3>
-                        <p class="text-gray-600 mb-5">Une immersion exclusive dans les coulisses des plus grands décors de cinéma.</p>
-                        <a href="article.html" class="font-bold text-amber-700 hover:text-amber-800 flex items-center group">
-                           Lire l'article <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
-                        </a>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <div class="mb-auto">
+                           <span class="text-sm font-bold text-amber-600 uppercase">Coulisses</span>
+                           <h3 class="text-2xl font-bold text-gray-800 mt-2 mb-3">Visite guidée des studios</h3>
+                           <p class="text-gray-600 mb-5">Une immersion exclusive dans les coulisses des plus grands décors de cinéma.</p>
+                        </div>
+                        <div class="mt-4">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">#Visite</span>
+                                <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">#Tourisme</span>
+                                <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">#Décors</span>
+                            </div>
+                            <a href="article.html" class="font-bold text-amber-700 hover:text-amber-800 flex items-center group mt-6">
+                                Lire l'article <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <!-- Article Card 3 -->
-                <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover">
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover flex flex-col">
                     <div class="relative">
                         <img src="https://source.unsplash.com/800x600/?gladiator,movie" alt="Gladiator Movie Set" class="w-full h-56 object-cover">
                         <button class="absolute top-4 right-4 bg-black bg-opacity-40 w-10 h-10 rounded-full flex items-center justify-center text-white hover:bg-red-500 transition-colors" title="Ajouter aux favoris">
                             <i class="far fa-heart"></i>
                         </button>
                     </div>
-                    <div class="p-6">
-                        <span class="text-sm font-bold text-amber-600 uppercase">Blockbusters</span>
-                        <h3 class="text-2xl font-bold text-gray-800 mt-2 mb-3">Films emblématiques tournés ici</h3>
-                        <p class="text-gray-600 mb-5">De Gladiator à Game of Thrones, explorez les blockbusters qui ont marqué la région.</p>
-                        <a href="article.html" class="font-bold text-amber-700 hover:text-amber-800 flex items-center group">
-                            Lire l'article <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
-                        </a>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <div class="mb-auto">
+                            <span class="text-sm font-bold text-amber-600 uppercase">Blockbusters</span>
+                            <h3 class="text-2xl font-bold text-gray-800 mt-2 mb-3">Films emblématiques tournés ici</h3>
+                            <p class="text-gray-600 mb-5">De Gladiator à Game of Thrones, explorez les blockbusters qui ont marqué la région.</p>
+                        </div>
+                        <div class="mt-4">
+                           <div class="flex flex-wrap gap-2">
+                                <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">#Gladiator</span>
+                                <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">#GameOfThrones</span>
+                                <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">#Films</span>
+                            </div>
+                            <a href="article.html" class="font-bold text-amber-700 hover:text-amber-800 flex items-center group mt-6">
+                                Lire l'article <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -264,5 +302,12 @@
             </div>
         </div>
     </footer>
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('-translate-x-full');
+        });
+    </script>
 </body>
 </html>

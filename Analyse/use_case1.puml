@@ -11,6 +11,7 @@ rectangle "Blog Ouarzazate" {
   (Lire un article en détail) as UC2
   (Rechercher un article) as UC3
   (Sauvegarder un article) as UC4
+  (Commenter sur un article) as UC7
   (Partager un article) as UC5
   (Gérer les articles) as UC6
 }
@@ -20,6 +21,9 @@ Touriste -- UC2
 Touriste -- UC3
 Touriste -- UC4
 Touriste -- UC5
+Touriste -- UC7
+
+
 
 Admin -- UC6
 

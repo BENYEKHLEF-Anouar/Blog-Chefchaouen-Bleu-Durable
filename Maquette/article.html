@@ -83,6 +83,7 @@
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="index.html" class="hover:text-amber-400 transition-colors duration-300">Accueil</a>
                     <a href="blog.html" class="text-amber-400 font-semibold">Blog</a>
+                    <a href="favorites.html" class="hover:text-amber-400 transition-colors duration-300">Favoris</a>
                     <!-- <a href="#" class="hover:text-amber-400 transition-colors duration-300">Studios</a> -->
                     <!-- <a href="#" class="hover:text-amber-400 transition-colors duration-300">Événements</a> -->
                     <!-- <a href="#" class="hover:text-amber-400 transition-colors duration-300">Contact</a> -->
@@ -103,6 +104,7 @@
         <div id="mobile-menu" class="mobile-menu md:hidden bg-gray-800 absolute w-full transform -translate-x-full">
             <a href="index.html" class="block px-6 py-3 hover:text-amber-400">Accueil</a>
             <a href="blog.html" class="block px-6 py-3 text-amber-400 font-semibold">Blog</a>
+            <a href="favorites.html" class="block px-6 py-3 hover:text-amber-400">Favoris</a>
             <!-- <a href="#" class="block px-6 py-3 hover:text-amber-400">Studios</a> -->
             <!-- <a href="#" class="block px-6 py-3 hover:text-amber-400">Événements</a> -->
             <!-- <a href="#" class="block px-6 py-3 hover:text-amber-400">Contact</a> -->
@@ -116,9 +118,10 @@
         <div class="absolute inset-0 bg-black opacity-60"></div>
         <div
             class="container mx-auto px-6 h-full flex flex-col justify-center items-center text-center relative z-10 text-white">
-            <a href="#"
-                class="bg-amber-600 text-white px-4 py-1 rounded-full text-sm font-semibold mb-4 hover:bg-amber-700 transition-colors">Histoire
-                du cinéma</a>
+            <div class="flex flex-wrap gap-2 mb-4">
+                 <a href="#" class="bg-amber-600 text-white px-4 py-1 rounded-full text-sm font-semibold hover:bg-amber-700 transition-colors">Histoire</a>
+                 <a href="#" class="bg-amber-600 text-white px-4 py-1 rounded-full text-sm font-semibold hover:bg-amber-700 transition-colors">Cinéma</a>
+            </div>
             <h1 class="text-5xl md:text-7xl font-bold mb-4">L'histoire des studios Atlas</h1>
             <div class="text-sm text-gray-300">
                 <span>Par Fatima El Amrani</span> &bull;
@@ -165,16 +168,20 @@
                     </p>
                 </div>
 
-                <!-- Tags & Actions -->
+                <!-- Categories, Tags & Actions -->
                 <div class="mt-12 pt-8 border-t border-gray-200">
+                     <div class="flex flex-wrap gap-3 items-center mb-6">
+                        <span class="text-sm font-semibold text-gray-600">CATÉGORIES:</span>
+                        <a href="#" class="bg-amber-100 hover:bg-amber-600 hover:text-white text-amber-800 px-4 py-2 rounded-full text-xs font-semibold transition-colors">Histoire</a>
+                        <a href="#" class="bg-amber-100 hover:bg-amber-600 hover:text-white text-amber-800 px-4 py-2 rounded-full text-xs font-semibold transition-colors">Cinéma</a>
+                        <a href="#" class="bg-amber-100 hover:bg-amber-600 hover:text-white text-amber-800 px-4 py-2 rounded-full text-xs font-semibold transition-colors">Maroc</a>
+                    </div>
                     <div class="flex flex-wrap items-center justify-between gap-6">
                         <div class="flex flex-wrap gap-3 items-center">
                             <span class="text-sm font-semibold text-gray-600">TAGS:</span>
-                            <a href="#"
-                                class="bg-gray-100 hover:bg-amber-600 hover:text-white text-gray-700 px-4 py-2 rounded-full text-xs font-semibold transition-colors">Studios
-                                Atlas</a>
-                            <a href="#"
-                                class="bg-gray-100 hover:bg-amber-600 hover:text-white text-gray-700 px-4 py-2 rounded-full text-xs font-semibold transition-colors">Histoire</a>
+                            <a href="#" class="bg-gray-100 hover:bg-amber-600 hover:text-white text-gray-700 px-4 py-2 rounded-full text-xs font-semibold transition-colors">#StudiosAtlas</a>
+                            <a href="#" class="bg-gray-100 hover:bg-amber-600 hover:text-white text-gray-700 px-4 py-2 rounded-full text-xs font-semibold transition-colors">#Ouarzazate</a>
+                             <a href="#" class="bg-gray-100 hover:bg-amber-600 hover:text-white text-gray-700 px-4 py-2 rounded-full text-xs font-semibold transition-colors">#Hollywood</a>
                         </div>
                         <div class="flex items-center space-x-3">
                             <button
