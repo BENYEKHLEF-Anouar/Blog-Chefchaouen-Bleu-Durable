@@ -16,7 +16,7 @@
                 <form action="{{ route('articles.index') }}" method="GET" class="mb-6">
                     <div class="flex flex-wrap -mx-3 mb-6">
                         <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
-                            <label for="category" class="block text-gray-700 text-sm font-bold mb-2">Filter by Category:</label>
+                            <label for="category" class="block text-gray-700 text-sm font-bold mb-2"><i class="fa-solid fa-filter"></i> Filter by Category:</label>
                             <div class="relative">
                                 <select name="category" id="category" class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" onchange="this.form.submit()">
                                     <option value="">All Categories</option>
