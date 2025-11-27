@@ -60,7 +60,7 @@
                     <i class="fas fa-check-circle text-green-600 mr-3 mt-1 shrink-0"></i>
                     <div>
                         <h4 class="font-bold text-gray-800">Rich Text Editor</h4>
-                        <p class="text-gray-600 text-sm">Summernote WYSIWYG editor for article content</p>
+                        <p class="text-gray-600 text-sm">Tiptap WYSIWYG editor for article content</p>
                     </div>
                 </div>
                 <div class="flex items-start">

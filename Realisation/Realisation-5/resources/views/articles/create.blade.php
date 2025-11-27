@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.admin')
 
 @section('title', 'Create Article - Blog Manager')
 
@@ -76,7 +76,7 @@
             </div>
 
             <!-- Status -->
-            <div class="mb-6">
+            <div class="mb-6 mt-4">
                 <label for="status" class="block text-sm font-medium text-gray-700 mb-2">
                     <i class="fas fa-flag mr-2"></i> Status <span class="text-red-600">*</span>
                 </label>

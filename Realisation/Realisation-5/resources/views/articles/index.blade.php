@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.admin')
 
 @section('title', 'Articles - Blog Manager')
 
@@ -68,6 +68,7 @@
                             <i class="fas fa-check"></i> Published
                         </option>
                     </select>
+                    
                 </div>
             </div>
 
