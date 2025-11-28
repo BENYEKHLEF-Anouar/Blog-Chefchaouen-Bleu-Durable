@@ -80,28 +80,36 @@
                 <label for="status" class="block text-sm font-medium text-gray-700 mb-2">
                     <i class="fas fa-flag mr-2"></i> Status <span class="text-red-600">*</span>
                 </label>
-                <div class="flex gap-4">
-                    <label class="flex items-center">
-                        <input 
-                            type="radio" 
-                            name="status" 
-                            value="draft" 
+
+                <!-- Card-style radio buttons (match edit page) -->
+                <div class="grid sm:grid-cols-2 gap-2">
+                    <label class="flex p-3 w-full bg-white border border-gray-200 rounded-lg text-sm focus-within:border-blue-500 focus-within:ring-1 focus-within:ring-blue-500">
+                        <input
+                            type="radio"
+                            name="status"
+                            value="draft"
                             {{ old('status', 'draft') === 'draft' ? 'checked' : '' }}
-                            class="mr-2"
-                        >
-                        <span class="text-gray-700"><i class="fas fa-pencil-alt mr-1"></i> Draft</span>
+                            class="shrink-0 mt-0.5 border-gray-200 rounded-full text-blue-600 focus:ring-blue-500 checked:border-blue-500 mr-3">
+                        <div>
+                            <div class="text-sm font-medium text-gray-800"><i class="fas fa-pencil-alt mr-1"></i> Draft</div>
+                            <div class="text-sm text-gray-500">Save the article as a draft and publish later.</div>
+                        </div>
                     </label>
-                    <label class="flex items-center">
-                        <input 
-                            type="radio" 
-                            name="status" 
-                            value="published" 
+
+                    <label class="flex p-3 w-full bg-white border border-gray-200 rounded-lg text-sm focus-within:border-blue-500 focus-within:ring-1 focus-within:ring-blue-500">
+                        <input
+                            type="radio"
+                            name="status"
+                            value="published"
                             {{ old('status') === 'published' ? 'checked' : '' }}
-                            class="mr-2"
-                        >
-                        <span class="text-gray-700"><i class="fas fa-check-circle mr-1"></i> Published</span>
+                            class="shrink-0 mt-0.5 border-gray-200 rounded-full text-blue-600 focus:ring-blue-500 checked:border-blue-500 mr-3">
+                        <div>
+                            <div class="text-sm font-medium text-gray-800"><i class="fas fa-check-circle mr-1"></i> Published</div>
+                            <div class="text-sm text-gray-500">Make the article public immediately.</div>
+                        </div>
                     </label>
                 </div>
+
                 @error('status')
                     <p class="text-red-600 text-sm mt-1"><i class="fas fa-exclamation-circle mr-1"></i> {{ $message }}</p>
                 @enderror

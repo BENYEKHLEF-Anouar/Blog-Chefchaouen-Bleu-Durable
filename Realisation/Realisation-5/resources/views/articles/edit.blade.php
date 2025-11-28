@@ -113,39 +113,36 @@
             <label for="status" class="block text-sm font-medium text-gray-700 mb-2">
                 <i class="fas fa-flag mr-2"></i> Status <span class="text-red-600">*</span>
             </label>
-            <div class="flex gap-4">
-                <label class="flex items-center">
+
+            <!-- Card-style radio buttons (replaces older simple radios) -->
+            <div class="grid sm:grid-cols-2 gap-2">
+                <label class="flex p-3 w-full bg-white border border-gray-200 rounded-lg text-sm focus-within:border-blue-500 focus-within:ring-1 focus-within:ring-blue-500">
                     <input
                         type="radio"
                         name="status"
                         value="draft"
                         {{ old('status', $article->status) === 'draft' ? 'checked' : '' }}
-                        class="mr-2">
-                    <span class="text-gray-700"><i class="fas fa-pencil-alt mr-1"></i> Draft</span>
+                        class="shrink-0 mt-0.5 border-gray-200 rounded-full text-blue-600 focus:ring-blue-500 checked:border-blue-500 mr-3">
+                    <div>
+                        <div class="text-sm font-medium text-gray-800"><i class="fas fa-pencil-alt mr-1"></i> Draft</div>
+                        <div class="text-sm text-gray-500">Save the article as a draft and publish later.</div>
+                    </div>
                 </label>
-                <label class="flex items-center">
+
+                <label class="flex p-3 w-full bg-white border border-gray-200 rounded-lg text-sm focus-within:border-blue-500 focus-within:ring-1 focus-within:ring-blue-500">
                     <input
                         type="radio"
                         name="status"
                         value="published"
                         {{ old('status', $article->status) === 'published' ? 'checked' : '' }}
-                        class="mr-2">
-                    <span class="text-gray-700"><i class="fas fa-check-circle mr-1"></i> Published</span>
+                        class="shrink-0 mt-0.5 border-gray-200 rounded-full text-blue-600 focus:ring-blue-500 checked:border-blue-500 mr-3">
+                    <div>
+                        <div class="text-sm font-medium text-gray-800"><i class="fas fa-check-circle mr-1"></i> Published</div>
+                        <div class="text-sm text-gray-500">Make the article public immediately.</div>
+                    </div>
                 </label>
             </div>
 
-
-            <div class="grid sm:grid-cols-2 gap-2">
-                <label for="hs-radio-in-form" class="flex p-3 w-full bg-white border border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400">
-                    <input type="radio" name="hs-radio-in-form" class="shrink-0 mt-0.5 border-gray-200 rounded-full text-blue-600 focus:ring-blue-500 checked:border-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800" id="hs-radio-in-form">
-                    <span class="text-sm text-gray-500 ms-3 dark:text-neutral-400">Default radio</span>
-                </label>
-
-                <label for="hs-radio-checked-in-form" class="flex p-3 w-full bg-white border border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400">
-                    <input type="radio" name="hs-radio-in-form" class="shrink-0 mt-0.5 border-gray-200 rounded-full text-blue-600 focus:ring-blue-500 checked:border-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800" id="hs-radio-checked-in-form" checked="">
-                    <span class="text-sm text-gray-500 ms-3 dark:text-neutral-400">Checked radio</span>
-                </label>
-            </div>
             @error('status')
             <p class="text-red-600 text-sm mt-1"><i class="fas fa-exclamation-circle mr-1"></i> {{ $message }}</p>
             @enderror

@@ -15,7 +15,7 @@
                     @endif
                 </div>
             </div>
-            <div class="flex gap-2">
+            <!-- <div class="flex gap-2">
                 <a href="{{ route('articles.edit', $article->id) }}" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
                     <i class="fas fa-edit mr-2"></i> Edit
                 </a>
@@ -26,7 +26,7 @@
                         <i class="fas fa-trash mr-2"></i> Delete
                     </button>
                 </form>
-            </div>
+            </div> -->
         </div>
 
         <!-- Status & Categories -->
