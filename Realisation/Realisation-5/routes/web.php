@@ -6,7 +6,8 @@ use App\Http\Controllers\CategoryController;
 
 // Welcome/home page
 Route::get('/', function () {
-    return view('welcome');
+    $articles = \App\Models\Article::where('status', 'published')->orderBy('created_at', 'desc')->limit(6)->get();
+    return view('welcome', compact('articles'));
 })->name('home');
 
 // Article Routes

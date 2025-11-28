@@ -1,6 +1,6 @@
-@extends('layouts.admin')
+@extends('layouts.app')
 
-@section('title', $article->title . ' - Blog Manager')
+@section('title', $article->title . ' - Blog')
 
 @section('content')
     <div class="bg-white rounded-lg shadow-md p-6">
