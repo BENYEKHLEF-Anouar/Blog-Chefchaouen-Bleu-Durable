@@ -84,7 +84,7 @@
             <div class="flex items-center justify-between mb-8">
                 <h2 class="text-3xl font-bold text-gray-800">
                     <span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600">
-                        Recent Articles
+                        <i class="fas fa-newspaper"></i>  Recent Articles
                     </span>
                 </h2>
                 <a href="{{ route('articles.index') }}" class="hidden md:inline-flex items-center text-gray-500 hover:text-blue-600 font-medium transition">
