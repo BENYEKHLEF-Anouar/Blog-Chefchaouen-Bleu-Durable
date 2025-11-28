@@ -31,7 +31,11 @@
         </div>
 
         <!-- Content with Tiptap -->
-        <div class="bg-white border border-gray-200 rounded-xl overflow-hidden">
+        <div class="mb-6">
+            <label class="block text-sm font-medium text-gray-700 mb-2">
+                <i class="fas fa-pen-fancy mr-2"></i> Content <span class="text-red-600">*</span>
+            </label>
+            <div class="bg-white border border-gray-200 rounded-xl overflow-hidden">
             <div id="hs-editor-tiptap-edit">
                 <div class="sticky top-0 bg-white flex align-middle gap-x-0.5 border-b border-gray-200 p-2">
                     <button class="size-8 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent text-gray-800 hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none" type="button" data-hs-editor-bold="">
@@ -107,6 +111,10 @@
             </div>
         </div>
         <input type="hidden" name="content" id="content" value="{{ old('content', $article->content) }}">
+        @error('content')
+        <p class="text-red-600 text-sm mt-1"><i class="fas fa-exclamation-circle mr-1"></i> {{ $message }}</p>
+        @enderror
+        </div>
 
         <!-- Status -->
         <div class="mb-6 mt-4">

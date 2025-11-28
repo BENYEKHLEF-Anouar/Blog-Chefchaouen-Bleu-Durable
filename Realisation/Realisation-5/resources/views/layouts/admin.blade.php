@@ -142,8 +142,12 @@
         const container = document.querySelector(`#${containerId}`);
         if (!container) return null;
 
+        const inputElement = document.getElementById(inputElementId);
+        const initialContent = inputElement && inputElement.value ? inputElement.value : '';
+
         const editor = new Editor({
             element: container.querySelector('[data-hs-editor-field]'),
+            content: initialContent,
             editorProps: {
                 attributes: {
                     class: 'relative min-h-40 p-3'
