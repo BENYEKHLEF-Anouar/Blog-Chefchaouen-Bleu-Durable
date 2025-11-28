@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->string('password')->nullable(); // Nullable since no auth system
              $table->enum('role', ['admin', 'user'])->default('admin');
-            $table->timestamps();
+            $table->timestamps(); // automatically creates two columns in your database table: created_at & updated_at
         });
     }
 

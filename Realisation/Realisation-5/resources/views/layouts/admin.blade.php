@@ -6,10 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title', 'Blog - Article Management')</title>
 
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    @stack('styles')
+    <!-- @stack('styles') -->
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
@@ -46,7 +45,7 @@
         <nav class="p-4 space-y-1 overflow-y-auto" style="max-height: calc(100vh - 120px);">
             <a href="{{ route('home') }}" class="flex items-center gap-3 px-4 py-3 rounded-lg text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition font-medium {{ request()->routeIs('home') ? 'bg-blue-100 text-blue-600' : '' }}">
                 <i class="fas fa-home w-5"></i>
-                <span>Dashboard</span>
+                <span>Accueil</span>
             </a>
             <a href="{{ route('articles.index') }}" class="flex items-center gap-3 px-4 py-3 rounded-lg text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition font-medium {{ request()->routeIs('articles.*') ? 'bg-blue-100 text-blue-600' : '' }}">
                 <i class="fas fa-newspaper w-5"></i>
@@ -119,7 +118,7 @@
         </footer>
     </div>
 
-    @stack('scripts')
+    <!-- @stack('scripts') -->
 </body>
 
 <script type="module">

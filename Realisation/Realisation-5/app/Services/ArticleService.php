@@ -11,12 +11,7 @@ use Illuminate\Pagination\LengthAwarePaginator;
 
 class ArticleService
 {
-    /**
-     * Get the default admin user.
-     *
-     * @return User
-     * @throws \Exception if no admin user exists
-     */
+
     protected function getDefaultAdmin(): User
     {
         $admin = User::where('role', 'admin')->first();
@@ -28,12 +23,6 @@ class ArticleService
         return $admin;
     }
 
-    /**
-     * Get paginated articles with filters and search.
-     *
-     * @param Request $request
-     * @return LengthAwarePaginator
-     */
     public function getArticles(Request $request): LengthAwarePaginator
     {
         $query = Article::with(['user', 'categories']);
@@ -42,7 +31,7 @@ class ArticleService
         if ($search = $request->input('search')) {
             $query->where(function ($q) use ($search) {
                 $q->where('title', 'LIKE', "%{$search}%")
-                  ->orWhere('content', 'LIKE', "%{$search}%"); // Optional: search content, but may be performance-heavy
+                    ->orWhere('content', 'LIKE', "%{$search}%"); // Optional: search content, but may be performance-heavy
             });
         }
 
@@ -61,28 +50,17 @@ class ArticleService
         return $query->orderBy('created_at', 'desc')->paginate(6);
     }
 
-    /**
-     * Get a single article by ID with relations.
-     *
-     * @param int $id
-     * @return Article
-     */
+    // fetches a single article with its author and categories, or throws a 404 if the ID doesn’t exist
     public function getArticleById(int $id): Article
     {
-        return Article::with(['user', 'categories'])->findOrFail($id);
+        return Article::with(['user', 'categories'])->findOrFail($id); // If not found → throws a 404 exception automatically (ModelNotFoundException)
     }
 
-    /**
-     * Create a new article.
-     *
-     * @param Request $request
-     * @return Article
-     * @throws \Exception if validation or creation fails
-     */
+
     public function createArticle(Request $request): Article
     {
         // Validate input
-        $validated = $request->validate([
+        $validated = $request->validate([    // Request $request → this method receives the HTTP request object from the controller.
             'title' => 'required|string|max:255',
             'content' => 'required|string',
             'status' => 'required|in:draft,published',
@@ -101,20 +79,13 @@ class ArticleService
 
         // Attach categories if provided
         if (!empty($validated['categories'])) {
-            $article->categories()->attach($validated['categories']);
+            $article->categories()->attach($validated['categories']); // establish or add relationships in many-to-many scenarios
         }
 
         return $article;
     }
 
-    /**
-     * Update an existing article.
-     *
-     * @param Article $article
-     * @param Request $request
-     * @return Article
-     * @throws \Exception if validation fails
-     */
+
     public function updateArticle(Article $article, Request $request): Article
     {
         // Validate input
@@ -134,31 +105,22 @@ class ArticleService
 
         // Sync categories if provided
         if (!empty($validated['categories'])) {
-            $article->categories()->sync($validated['categories']);
+            $article->categories()->sync($validated['categories']); // Replaces all existing category links with the new ones / Adds missing IDs and removes old ones not in the array.
         } else {
-            $article->categories()->detach();
+            $article->categories()->detach(); // If no categories are provided, it removes all category links from the pivot table.
         }
 
         return $article;
     }
 
-    /**
-     * Delete an article.
-     *
-     * @param Article $article
-     * @return void
-     */
+
     public function deleteArticle(Article $article): void
     {
-        $article->categories()->detach(); // Clean up pivot
+        $article->categories()->detach(); // Clean up pivot, it removes all entries in the pivot table for this article.
         $article->delete();
     }
 
-    /**
-     * Get all categories for forms.
-     *
-     * @return \Illuminate\Database\Eloquent\Collection
-     */
+
     public function getCategories()
     {
         return Category::all();
