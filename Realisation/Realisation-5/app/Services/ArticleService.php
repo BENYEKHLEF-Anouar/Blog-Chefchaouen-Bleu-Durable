@@ -58,7 +58,7 @@ class ArticleService
             $query->where('status', $status);
         }
 
-        return $query->orderBy('created_at', 'desc')->paginate(10);
+        return $query->orderBy('created_at', 'desc')->paginate(6);
     }
 
     /**
