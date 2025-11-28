@@ -111,11 +111,11 @@
         </main>
 
         <!-- Footer -->
-        <footer class="bg-gray-900 text-gray-300 mt-12 py-8">
+        <!-- <footer class="bg-gray-900 text-gray-300 mt-12 py-8">
             <div class="max-w-7xl mx-auto px-4 text-center">
                 <p>&copy; {{ date('Y') }} Blog Management System. All rights reserved.</p>
             </div>
-        </footer>
+        </footer> -->
     </div>
 
     <!-- @stack('scripts') -->
